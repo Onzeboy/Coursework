@@ -15,10 +15,16 @@ namespace Coursework.MainForms
     {
         DataBase dataBase = new DataBase();
         public int idPR { get; set; }
-        public Prepd(int subid)
+        public Prepd(int subid, string admin)
         {
             InitializeComponent();
             idPR = subid;
+            if(admin != "admin")
+            {
+                button1.Visible = false;
+                button2.Visible = false;
+                button3.Visible = false;
+            }
         }
 
         private void dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)

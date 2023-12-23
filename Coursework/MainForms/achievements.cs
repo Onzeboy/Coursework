@@ -15,11 +15,17 @@ namespace Coursework.MainForms
     {
         DataBase dataBase = new DataBase();
         public int idAc { get; set;}
-        public achievements(int studentid)
+        public achievements(int studentid, string admin)
         {
             InitializeComponent();
             this.dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             idAc = studentid;
+            if (admin != "admin")
+            {
+                button1.Visible = false;
+                button2.Visible = false;
+                button3.Visible = false;
+            }
         }
         private void ReadsingleRowSt2(DataGridView dgw, IDataRecord record)
         {

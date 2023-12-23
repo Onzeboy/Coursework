@@ -18,12 +18,18 @@ namespace Coursework.MainForms
         public int idPerf { get; set; }
         bool isDAte = false;
 
-        public Perfomance(int studentid)
+        public Perfomance(int studentid, string admin)
         {
             InitializeComponent();
             idPerf = studentid;
             this.dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv.Columns[3].DefaultCellStyle.Format = "dd/MM/yyyy";
+            if (admin != "admin")
+            {
+                button1.Visible = false;
+                button2.Visible = false;
+                button3.Visible = false;
+            }
         }
         private void ReadsingleRowSt2(DataGridView dgw, IDataRecord record)
         {

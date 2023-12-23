@@ -66,6 +66,7 @@ namespace Coursework
             this.ClassS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.photoS = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.button14 = new System.Windows.Forms.Button();
             this.dgvperf = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,7 +79,6 @@ namespace Coursework
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAcademy)).BeginInit();
@@ -260,6 +260,7 @@ namespace Coursework
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(708, 504);
             this.panel3.TabIndex = 15;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // comboBox2
             // 
@@ -525,6 +526,28 @@ namespace Coursework
             this.panel5.TabIndex = 10;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "Показать все",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11"});
+            this.comboBox4.Location = new System.Drawing.Point(457, 462);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(127, 21);
+            this.comboBox4.TabIndex = 16;
+            this.comboBox4.Text = "Выберите класс";
+            // 
             // button14
             // 
             this.button14.BackColor = System.Drawing.Color.White;
@@ -651,28 +674,6 @@ namespace Coursework
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "Показать все",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11"});
-            this.comboBox4.Location = new System.Drawing.Point(457, 462);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(127, 21);
-            this.comboBox4.TabIndex = 16;
-            this.comboBox4.Text = "Выберите класс";
             // 
             // Form1
             // 

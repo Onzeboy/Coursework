@@ -385,7 +385,7 @@ namespace Coursework
                 int selectedrowindex = dgvAchStd.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dgvAchStd.Rows[selectedrowindex];
                 int id = Convert.ToInt32(selectedRow.Cells[0].Value);
-                achievements ac = new achievements(id);
+                achievements ac = new achievements(id, login);
                 ac.ShowDialog();
             }
         }
@@ -442,7 +442,7 @@ namespace Coursework
                 int selectedrowindex = dataGridViewAcademy.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dataGridViewAcademy.Rows[selectedrowindex];
                 int id = Convert.ToInt32(selectedRow.Cells[0].Value);
-                Prepd pr = new Prepd(id);
+                Prepd pr = new Prepd(id, login) ;
                 pr.ShowDialog();
             }
         }
@@ -459,7 +459,7 @@ namespace Coursework
                 int selectedrowindex = dgvperf.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dgvperf.Rows[selectedrowindex];
                 int id = Convert.ToInt32(selectedRow.Cells[0].Value);
-                Perfomance pf = new Perfomance(id);
+                Perfomance pf = new Perfomance(id, login);
                 pf.ShowDialog();
             }
         }
@@ -524,6 +524,11 @@ namespace Coursework
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }
