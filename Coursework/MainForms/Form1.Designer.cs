@@ -40,9 +40,12 @@ namespace Coursework
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button7 = new System.Windows.Forms.Button();
             this.dataGridViewAcademy = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TeachingHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button15 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.dgvAchStd = new System.Windows.Forms.DataGridView();
             this.idSt2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,35 +53,32 @@ namespace Coursework
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.button12 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.dataGridViewStudents = new System.Windows.Forms.DataGridView();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button14 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dgvperf = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ID_N = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.surnames = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MidnameS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClassS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.photoS = new System.Windows.Forms.DataGridViewImageColumn();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TeachingHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button14 = new System.Windows.Forms.Button();
+            this.dgvperf = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAcademy)).BeginInit();
@@ -97,10 +97,9 @@ namespace Coursework
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(0, 162);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(0, 132);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(264, 46);
+            this.button1.Size = new System.Drawing.Size(198, 37);
             this.button1.TabIndex = 1;
             this.button1.Text = "Учебный план";
             this.button1.UseVisualStyleBackColor = false;
@@ -109,10 +108,9 @@ namespace Coursework
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 110);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(0, 89);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(264, 46);
+            this.button2.Size = new System.Drawing.Size(198, 37);
             this.button2.TabIndex = 2;
             this.button2.Text = "Список учеников";
             this.button2.UseVisualStyleBackColor = false;
@@ -121,10 +119,9 @@ namespace Coursework
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 57);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Location = new System.Drawing.Point(0, 46);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(264, 46);
+            this.button3.Size = new System.Drawing.Size(198, 37);
             this.button3.TabIndex = 3;
             this.button3.Text = "Достижения";
             this.button3.UseVisualStyleBackColor = false;
@@ -133,10 +130,9 @@ namespace Coursework
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(0, 4);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Location = new System.Drawing.Point(0, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(264, 46);
+            this.button4.Size = new System.Drawing.Size(198, 37);
             this.button4.TabIndex = 4;
             this.button4.Text = " Оценки";
             this.button4.UseVisualStyleBackColor = false;
@@ -149,10 +145,9 @@ namespace Coursework
             this.panel4.Controls.Add(this.button4);
             this.panel4.Controls.Add(this.button3);
             this.panel4.Controls.Add(this.button2);
-            this.panel4.Location = new System.Drawing.Point(16, 15);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Location = new System.Drawing.Point(12, 12);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(264, 225);
+            this.panel4.Size = new System.Drawing.Size(198, 183);
             this.panel4.TabIndex = 11;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -164,10 +159,9 @@ namespace Coursework
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.dataGridViewAcademy);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.panel1.Location = new System.Drawing.Point(288, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(230, 15);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(933, 615);
+            this.panel1.Size = new System.Drawing.Size(708, 504);
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -175,10 +169,9 @@ namespace Coursework
             // 
             this.button8.BackColor = System.Drawing.Color.White;
             this.button8.ForeColor = System.Drawing.Color.Black;
-            this.button8.Location = new System.Drawing.Point(789, 558);
-            this.button8.Margin = new System.Windows.Forms.Padding(4);
+            this.button8.Location = new System.Drawing.Point(592, 453);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(128, 46);
+            this.button8.Size = new System.Drawing.Size(96, 37);
             this.button8.TabIndex = 10;
             this.button8.Text = "Поиск";
             this.button8.UseVisualStyleBackColor = false;
@@ -198,10 +191,9 @@ namespace Coursework
             "Физика ",
             "Химия",
             "Астрономия "});
-            this.comboBox1.Location = new System.Drawing.Point(511, 569);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1.Location = new System.Drawing.Point(383, 462);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(267, 24);
+            this.comboBox1.Size = new System.Drawing.Size(201, 21);
             this.comboBox1.TabIndex = 9;
             this.comboBox1.Text = "Поиск по предмету";
             // 
@@ -209,10 +201,9 @@ namespace Coursework
             // 
             this.button7.BackColor = System.Drawing.Color.White;
             this.button7.ForeColor = System.Drawing.Color.Black;
-            this.button7.Location = new System.Drawing.Point(20, 558);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
+            this.button7.Location = new System.Drawing.Point(15, 453);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(128, 46);
+            this.button7.Size = new System.Drawing.Size(96, 37);
             this.button7.TabIndex = 8;
             this.button7.Text = "Редактировать";
             this.button7.UseVisualStyleBackColor = false;
@@ -227,49 +218,82 @@ namespace Coursework
             this.Subject,
             this.TeachingHours});
             this.dataGridViewAcademy.Location = new System.Drawing.Point(0, 0);
-            this.dataGridViewAcademy.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewAcademy.Name = "dataGridViewAcademy";
             this.dataGridViewAcademy.RowHeadersWidth = 51;
-            this.dataGridViewAcademy.Size = new System.Drawing.Size(929, 550);
+            this.dataGridViewAcademy.Size = new System.Drawing.Size(697, 447);
             this.dataGridViewAcademy.TabIndex = 6;
             this.dataGridViewAcademy.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             this.dataGridViewAcademy.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvacademysp);
             // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            this.id.Width = 125;
+            // 
+            // Subject
+            // 
+            this.Subject.HeaderText = "Дисциплина";
+            this.Subject.MinimumWidth = 6;
+            this.Subject.Name = "Subject";
+            this.Subject.ReadOnly = true;
+            this.Subject.Width = 125;
+            // 
+            // TeachingHours
+            // 
+            this.TeachingHours.HeaderText = "Часы преподавания";
+            this.TeachingHours.MinimumWidth = 6;
+            this.TeachingHours.Name = "TeachingHours";
+            this.TeachingHours.ReadOnly = true;
+            this.TeachingHours.Width = 125;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Controls.Add(this.comboBox2);
             this.panel3.Controls.Add(this.button15);
-            this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.dgvAchStd);
-            this.panel3.Location = new System.Drawing.Point(288, 1);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Location = new System.Drawing.Point(230, 15);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(933, 615);
+            this.panel3.Size = new System.Drawing.Size(708, 504);
             this.panel3.TabIndex = 15;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Показать все",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11"});
+            this.comboBox2.Location = new System.Drawing.Point(459, 462);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(125, 21);
+            this.comboBox2.TabIndex = 14;
+            this.comboBox2.Text = "Выберите класс";
             // 
             // button15
             // 
             this.button15.BackColor = System.Drawing.Color.White;
             this.button15.ForeColor = System.Drawing.Color.Black;
-            this.button15.Location = new System.Drawing.Point(787, 558);
-            this.button15.Margin = new System.Windows.Forms.Padding(4);
+            this.button15.Location = new System.Drawing.Point(590, 453);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(128, 46);
+            this.button15.Size = new System.Drawing.Size(96, 37);
             this.button15.TabIndex = 13;
             this.button15.Text = "Поиск";
             this.button15.UseVisualStyleBackColor = false;
             this.button15.Click += new System.EventHandler(this.button15_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(511, 569);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox1.Size = new System.Drawing.Size(267, 22);
-            this.textBox1.TabIndex = 12;
-            this.textBox1.Text = "Введите фамилию";
-            this.textBox1.Enter += new System.EventHandler(this.tb1);
             // 
             // dgvAchStd
             // 
@@ -283,10 +307,9 @@ namespace Coursework
             this.dataGridViewTextBoxColumn5});
             this.dgvAchStd.GridColor = System.Drawing.Color.White;
             this.dgvAchStd.Location = new System.Drawing.Point(0, -1);
-            this.dgvAchStd.Margin = new System.Windows.Forms.Padding(4);
             this.dgvAchStd.Name = "dgvAchStd";
             this.dgvAchStd.RowHeadersWidth = 51;
-            this.dgvAchStd.Size = new System.Drawing.Size(933, 550);
+            this.dgvAchStd.Size = new System.Drawing.Size(708, 447);
             this.dgvAchStd.TabIndex = 0;
             this.dgvAchStd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAchStd_CellContentClick);
             this.dgvAchStd.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvs2script);
@@ -335,50 +358,59 @@ namespace Coursework
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Controls.Add(this.comboBox3);
             this.panel2.Controls.Add(this.button12);
-            this.panel2.Controls.Add(this.textBox2);
             this.panel2.Controls.Add(this.button11);
             this.panel2.Controls.Add(this.button10);
             this.panel2.Controls.Add(this.button9);
             this.panel2.Controls.Add(this.dataGridViewStudents);
-            this.panel2.Location = new System.Drawing.Point(288, 1);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(230, 15);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(933, 615);
+            this.panel2.Size = new System.Drawing.Size(708, 504);
             this.panel2.TabIndex = 7;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Показать все",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11"});
+            this.comboBox3.Location = new System.Drawing.Point(459, 461);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(125, 21);
+            this.comboBox3.TabIndex = 15;
+            this.comboBox3.Text = "Выберите класс";
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // button12
             // 
             this.button12.BackColor = System.Drawing.Color.White;
             this.button12.ForeColor = System.Drawing.Color.Black;
-            this.button12.Location = new System.Drawing.Point(787, 557);
-            this.button12.Margin = new System.Windows.Forms.Padding(4);
+            this.button12.Location = new System.Drawing.Point(590, 453);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(128, 46);
+            this.button12.Size = new System.Drawing.Size(96, 37);
             this.button12.TabIndex = 15;
             this.button12.Text = "Поиск";
             this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(511, 569);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox2.Size = new System.Drawing.Size(267, 22);
-            this.textBox2.TabIndex = 14;
-            this.textBox2.Text = "Введите фамилию";
-            this.textBox2.Enter += new System.EventHandler(this.tb2sp);
-            // 
             // button11
             // 
             this.button11.BackColor = System.Drawing.Color.White;
             this.button11.ForeColor = System.Drawing.Color.Black;
-            this.button11.Location = new System.Drawing.Point(20, 557);
-            this.button11.Margin = new System.Windows.Forms.Padding(4);
+            this.button11.Location = new System.Drawing.Point(15, 453);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(128, 46);
+            this.button11.Size = new System.Drawing.Size(96, 37);
             this.button11.TabIndex = 11;
             this.button11.Text = "Редактировать";
             this.button11.UseVisualStyleBackColor = false;
@@ -388,10 +420,9 @@ namespace Coursework
             // 
             this.button10.BackColor = System.Drawing.Color.White;
             this.button10.ForeColor = System.Drawing.Color.Black;
-            this.button10.Location = new System.Drawing.Point(157, 557);
-            this.button10.Margin = new System.Windows.Forms.Padding(4);
+            this.button10.Location = new System.Drawing.Point(118, 453);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(128, 46);
+            this.button10.Size = new System.Drawing.Size(96, 37);
             this.button10.TabIndex = 10;
             this.button10.Text = "Удалить";
             this.button10.UseVisualStyleBackColor = false;
@@ -401,10 +432,9 @@ namespace Coursework
             // 
             this.button9.BackColor = System.Drawing.Color.White;
             this.button9.ForeColor = System.Drawing.Color.Black;
-            this.button9.Location = new System.Drawing.Point(293, 557);
-            this.button9.Margin = new System.Windows.Forms.Padding(4);
+            this.button9.Location = new System.Drawing.Point(220, 453);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(128, 46);
+            this.button9.Size = new System.Drawing.Size(96, 37);
             this.button9.TabIndex = 9;
             this.button9.Text = "Добавить";
             this.button9.UseVisualStyleBackColor = false;
@@ -422,126 +452,14 @@ namespace Coursework
             this.ClassS,
             this.photoS});
             this.dataGridViewStudents.GridColor = System.Drawing.Color.White;
-            this.dataGridViewStudents.Location = new System.Drawing.Point(4, 0);
-            this.dataGridViewStudents.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewStudents.Location = new System.Drawing.Point(3, 0);
             this.dataGridViewStudents.Name = "dataGridViewStudents";
             this.dataGridViewStudents.RowHeadersWidth = 51;
-            this.dataGridViewStudents.Size = new System.Drawing.Size(933, 550);
+            this.dataGridViewStudents.Size = new System.Drawing.Size(700, 447);
             this.dataGridViewStudents.TabIndex = 0;
             this.dataGridViewStudents.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewStudents_CellClick);
             this.dataGridViewStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_2);
             this.dataGridViewStudents.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Black;
-            this.panel5.Controls.Add(this.button14);
-            this.panel5.Controls.Add(this.textBox4);
-            this.panel5.Controls.Add(this.dgvperf);
-            this.panel5.Location = new System.Drawing.Point(288, 1);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(933, 615);
-            this.panel5.TabIndex = 10;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
-            // 
-            // button14
-            // 
-            this.button14.BackColor = System.Drawing.Color.White;
-            this.button14.ForeColor = System.Drawing.Color.Black;
-            this.button14.Location = new System.Drawing.Point(787, 558);
-            this.button14.Margin = new System.Windows.Forms.Padding(4);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(128, 46);
-            this.button14.TabIndex = 15;
-            this.button14.Text = "Поиск";
-            this.button14.UseVisualStyleBackColor = false;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(511, 569);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox4.Size = new System.Drawing.Size(267, 22);
-            this.textBox4.TabIndex = 14;
-            this.textBox4.Text = "Введите фамилию";
-            // 
-            // dgvperf
-            // 
-            this.dgvperf.BackgroundColor = System.Drawing.Color.White;
-            this.dgvperf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvperf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14});
-            this.dgvperf.GridColor = System.Drawing.Color.White;
-            this.dgvperf.Location = new System.Drawing.Point(0, 0);
-            this.dgvperf.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvperf.Name = "dgvperf";
-            this.dgvperf.RowHeadersWidth = 51;
-            this.dgvperf.Size = new System.Drawing.Size(933, 550);
-            this.dgvperf.TabIndex = 0;
-            this.dgvperf.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            this.dgvperf.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPerfScript);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(372, 196);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(468, 45);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "АИС Учет успеваемости";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.label1);
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1234, 654);
-            this.panel6.TabIndex = 1;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.label2);
-            this.panel7.Controls.Add(this.pictureBox1);
-            this.panel7.Location = new System.Drawing.Point(16, 267);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(265, 272);
-            this.panel7.TabIndex = 14;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 16);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Фото";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(265, 249);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // ID_N
             // 
@@ -595,58 +513,48 @@ namespace Coursework
             this.photoS.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.photoS.Visible = false;
             // 
-            // id
+            // panel5
             // 
-            this.id.HeaderText = "id";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            this.id.Width = 125;
+            this.panel5.BackColor = System.Drawing.Color.Black;
+            this.panel5.Controls.Add(this.comboBox4);
+            this.panel5.Controls.Add(this.button14);
+            this.panel5.Controls.Add(this.dgvperf);
+            this.panel5.Location = new System.Drawing.Point(230, 15);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(708, 504);
+            this.panel5.TabIndex = 10;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
-            // Subject
+            // button14
             // 
-            this.Subject.HeaderText = "Дисциплина";
-            this.Subject.MinimumWidth = 6;
-            this.Subject.Name = "Subject";
-            this.Subject.ReadOnly = true;
-            this.Subject.Width = 125;
+            this.button14.BackColor = System.Drawing.Color.White;
+            this.button14.ForeColor = System.Drawing.Color.Black;
+            this.button14.Location = new System.Drawing.Point(590, 453);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(96, 37);
+            this.button14.TabIndex = 15;
+            this.button14.Text = "Поиск";
+            this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click_1);
             // 
-            // TeachingHours
+            // dgvperf
             // 
-            this.TeachingHours.HeaderText = "Часы преподавания";
-            this.TeachingHours.MinimumWidth = 6;
-            this.TeachingHours.Name = "TeachingHours";
-            this.TeachingHours.ReadOnly = true;
-            this.TeachingHours.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.HeaderText = "Класс";
-            this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.HeaderText = "Отчество";
-            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.HeaderText = "Имя";
-            this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.HeaderText = "Фамилия";
-            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.Width = 125;
+            this.dgvperf.BackgroundColor = System.Drawing.Color.White;
+            this.dgvperf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvperf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14});
+            this.dgvperf.GridColor = System.Drawing.Color.White;
+            this.dgvperf.Location = new System.Drawing.Point(0, 0);
+            this.dgvperf.Name = "dgvperf";
+            this.dgvperf.RowHeadersWidth = 51;
+            this.dgvperf.Size = new System.Drawing.Size(700, 447);
+            this.dgvperf.TabIndex = 0;
+            this.dgvperf.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.dgvperf.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPerfScript);
             // 
             // dataGridViewTextBoxColumn10
             // 
@@ -656,23 +564,132 @@ namespace Coursework
             this.dataGridViewTextBoxColumn10.Visible = false;
             this.dataGridViewTextBoxColumn10.Width = 125;
             // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.HeaderText = "Фамилия";
+            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.HeaderText = "Имя";
+            this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.HeaderText = "Отчество";
+            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.HeaderText = "Класс";
+            this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.Width = 125;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(279, 159);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(371, 36);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "АИС Учет успеваемости";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.label1);
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Margin = new System.Windows.Forms.Padding(0);
+            this.panel6.MaximumSize = new System.Drawing.Size(950, 531);
+            this.panel6.MinimumSize = new System.Drawing.Size(950, 531);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(950, 531);
+            this.panel6.TabIndex = 1;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.label2);
+            this.panel7.Controls.Add(this.pictureBox1);
+            this.panel7.Location = new System.Drawing.Point(12, 217);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(199, 221);
+            this.panel7.TabIndex = 14;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(2, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Фото";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 26);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(199, 202);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "Показать все",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11"});
+            this.comboBox4.Location = new System.Drawing.Point(457, 462);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(127, 21);
+            this.comboBox4.TabIndex = 16;
+            this.comboBox4.Text = "Выберите класс";
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1216, 607);
+            this.ClientSize = new System.Drawing.Size(937, 521);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1234, 654);
-            this.MinimumSize = new System.Drawing.Size(1234, 654);
+            this.MaximumSize = new System.Drawing.Size(953, 560);
+            this.MinimumSize = new System.Drawing.Size(953, 560);
             this.Name = "Form1";
             this.Text = "Учет успеваемости";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -680,13 +697,10 @@ namespace Coursework
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAcademy)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAchStd)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudents)).EndInit();
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvperf)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
@@ -710,7 +724,6 @@ namespace Coursework
         private System.Windows.Forms.DataGridView dataGridViewAcademy;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dgvAchStd;
         private System.Windows.Forms.DataGridViewTextBoxColumn idSt2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -719,14 +732,11 @@ namespace Coursework
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.DataGridView dataGridViewStudents;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.DataGridView dgvperf;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel6;
@@ -747,6 +757,10 @@ namespace Coursework
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.ComboBox comboBox4;
     }
 }
 

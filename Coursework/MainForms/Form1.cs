@@ -39,11 +39,11 @@ namespace Coursework
             if (login != "admin")
             {
                 button7.Visible = false;
-                
+
                 button9.Visible = false;
                 button10.Visible = false;
                 button11.Visible = false;
-               
+
             }
             RefreshDataGridStudents(dataGridViewStudents);
             RefreshDataGridStudents2(dgvAchStd);
@@ -56,6 +56,7 @@ namespace Coursework
             panel4.Visible = false;
             panel6.Visible = true;
             panel7.Visible = false;
+           
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -160,8 +161,8 @@ namespace Coursework
         private void RefreshDataGridStudentsSearch(DataGridView dgw)
         {
             dgw.Rows.Clear();
-            var search = textBox1.Text;
-            string queryString = $"select * from students where surname = '{search}'";
+            var search = comboBox4.Text;
+            string queryString = $"select * from students where class = '{search}'";
             SqlCommand command = new SqlCommand(queryString, dataBase.getConnection());
             dataBase.openConnection();
             SqlDataReader reader = command.ExecuteReader();
@@ -177,8 +178,8 @@ namespace Coursework
         private void RefreshDataGridStudentsSearch2(DataGridView dgw)
         {
             dgw.Rows.Clear();
-            var search = textBox2.Text;
-            string queryString = $"select * from students where surname = '{search}'";
+            var search = comboBox3.Text;
+            string queryString = $"select * from students where class = '{search}'";
             SqlCommand command = new SqlCommand(queryString, dataBase.getConnection());
             dataBase.openConnection();
             SqlDataReader reader = command.ExecuteReader();
@@ -191,23 +192,23 @@ namespace Coursework
             reader.Close();
             dataBase.closeConnection();
         }
-        private void RefreshDataGridStudentsSearch3(DataGridView dgw)
-        {
-            dgw.Rows.Clear();
-            var search = textBox2.Text;
-            string queryString = $"select * from students where surname = '{search}'";
-            SqlCommand command = new SqlCommand(queryString, dataBase.getConnection());
-            dataBase.openConnection();
-            SqlDataReader reader = command.ExecuteReader();
+        //private void RefreshDataGridStudentsSearch3(DataGridView dgw)
+        //{
+        //    dgw.Rows.Clear();
+        //    var search = textBox2.Text;
+        //    string queryString = $"select * from students where surname = '{search}'";
+        //    SqlCommand command = new SqlCommand(queryString, dataBase.getConnection());
+        //    dataBase.openConnection();
+        //    SqlDataReader reader = command.ExecuteReader();
 
-            while (reader.Read())
-            {
-                ReadsingleRowSt(dgw, reader);
-            }
+        //    while (reader.Read())
+        //    {
+        //        ReadsingleRowSt(dgw, reader);
+        //    }
 
-            reader.Close();
-            dataBase.closeConnection();
-        }
+        //    reader.Close();
+        //    dataBase.closeConnection();
+        //}
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -294,8 +295,8 @@ namespace Coursework
 
         private void dataGridView1_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
         {
-            
-           
+
+
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -333,7 +334,7 @@ namespace Coursework
             Bitmap img = (Bitmap)dataGridViewStudents.CurrentRow.Cells[5].Value;
             img.Save(ms, ImageFormat.Jpeg);
             Image image = Image.FromStream(ms);
-            
+
             StudentUpd stu = new StudentUpd(name, surname, midname, Class, image);
             var result = stu.ShowDialog();
             if (result == DialogResult.OK)
@@ -391,22 +392,22 @@ namespace Coursework
 
         private void tb1(object sender, EventArgs e)
         {
-            textBox1.Clear();
+            
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
-            if(textBox1.Text == "")
+            if (comboBox2.Text == "Показать все" || comboBox2.Text == "Выберите класс")
             {
                 RefreshDataGridStudents2(dgvAchStd);
             }
             else
-            RefreshDataGridStudentsSearch(dgvAchStd);
+            RefreshDataGridStudentsSearch2(dgvAchStd);
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
-            if(textBox2.Text == "")
+            if(comboBox3.Text == "Показать все" || comboBox3.Text == "Выберите класс")
             {
                 RefreshDataGridStudents(dataGridViewStudents);
             }
@@ -416,7 +417,7 @@ namespace Coursework
 
         private void tb2sp(object sender, EventArgs e)
         {
-            textBox2.Clear();
+           
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -508,6 +509,21 @@ namespace Coursework
         }
 
         private void button14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button14_Click_1(object sender, EventArgs e)
+        {
+            if (comboBox4.Text == "Показать все" || comboBox4.Text == "Выберите класс")
+            {
+                RefreshDataGridStudents2(dgvperf);
+            }
+            else
+                RefreshDataGridStudentsSearch(dgvperf);
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -108,31 +108,31 @@ namespace Coursework.MainForms
 
         }
 
-        private void RefreshDataGridSearchDate(DataGridView dgw)
-        {
-            dgw.Rows.Clear();
-            DateTime first = dateTimePicker1.Value;
-            DateTime second = dateTimePicker2.Value;
-            string queryString = $"select * from perfomance where datag > '{first}' AND datag < '{second}'";
-            SqlCommand command = new SqlCommand(queryString, dataBase.getConnection());
-            dataBase.openConnection();
-            SqlDataReader reader = command.ExecuteReader();
+        //private void RefreshDataGridSearchDate(DataGridView dgw)
+        //{
+        //    dgw.Rows.Clear();
+        //    DateTime first = dateTimePicker1.Value;
+        //    DateTime second = dateTimePicker2.Value;
+        //    string queryString = $"select * from perfomance where datag > '{first}' AND datag < '{second}'";
+        //    SqlCommand command = new SqlCommand(queryString, dataBase.getConnection());
+        //    dataBase.openConnection();
+        //    SqlDataReader reader = command.ExecuteReader();
 
-            while (reader.Read())
-            {
-                ReadsingleRowSt2(dgw, reader);
-            }
+        //    while (reader.Read())
+        //    {
+        //        ReadsingleRowSt2(dgw, reader);
+        //    }
 
-            reader.Close();
-            dataBase.closeConnection();
-        }
+        //    reader.Close();
+        //    dataBase.closeConnection();
+        //}
         private void RefreshDataGridSearchDate2(DataGridView dgw)
         {
             dgw.Rows.Clear();
             var name = comboBox1.Text;
             DateTime first = dateTimePicker1.Value;
             DateTime second = dateTimePicker2.Value;
-            string queryString = $"select * from perfomance where datag > '{first}' AND datag < '{second}' AND sbname = '{name}'";
+            string queryString = $"select * from perfomance where datag > '{first}' AND datag < '{second}' AND sbname = '{name}' AND stid = '{idPerf}'";
             SqlCommand command = new SqlCommand(queryString, dataBase.getConnection());
             dataBase.openConnection();
             SqlDataReader reader = command.ExecuteReader();
@@ -145,11 +145,13 @@ namespace Coursework.MainForms
             reader.Close();
             dataBase.closeConnection();
         }
-        private void RefreshDataGridSearchSubj(DataGridView dgw)
+        private void RefreshDataGridSearchDate3(DataGridView dgw)
         {
             dgw.Rows.Clear();
             var name = comboBox1.Text;
-            string queryString = $"select * from perfomance where sbname = '{name}'";
+            DateTime first = dateTimePicker1.Value;
+            DateTime second = dateTimePicker2.Value;
+            string queryString = $"select * from perfomance where datag > '{first}' AND datag < '{second}' AND stid = '{idPerf}'";
             SqlCommand command = new SqlCommand(queryString, dataBase.getConnection());
             dataBase.openConnection();
             SqlDataReader reader = command.ExecuteReader();
@@ -162,17 +164,87 @@ namespace Coursework.MainForms
             reader.Close();
             dataBase.closeConnection();
         }
-        private void button4_Click(object sender, EventArgs e)
+        private void RefreshDataGridSearchPrp(DataGridView dgw)
         {
-            if (comboBox1.Text == "Предметы")
+            dgw.Rows.Clear();
+            string queryString = $"select * from perfomance where grade = 'n' AND stid = '{idPerf}'";
+            SqlCommand command = new SqlCommand(queryString, dataBase.getConnection());
+            dataBase.openConnection();
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
             {
-                RefreshDataGridSearchDate(dgv);
+                ReadsingleRowSt2(dgw, reader);
+            }
+
+            reader.Close();
+            dataBase.closeConnection();
+        }
+        private void RefreshDataGridSearchPrp2(DataGridView dgw)
+        {
+            PerfomancePrp pp = new PerfomancePrp();
+            pp.ShowDialog();
+            if (pp.sname == "Предмет" || pp.sname == "Показать все")
+            {
+                dgw.Rows.Clear();
+                string queryString = $"select * from perfomance where grade = 'n' AND stid = '{idPerf}' AND datag > '{pp.FirstDate}' AND datag < '{pp.SecondDate}'";
+                SqlCommand command = new SqlCommand(queryString, dataBase.getConnection());
+                dataBase.openConnection();
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    ReadsingleRowSt2(dgw, reader);
+                }
+
+                reader.Close();
+                dataBase.closeConnection();
             }
             else
-                RefreshDataGridSearchDate2(dgv);
-            isDAte = true;
+            {
+                dgw.Rows.Clear();
+                string queryString = $"select * from perfomance where grade = 'n' AND stid = '{idPerf}' AND datag > '{pp.FirstDate}' AND datag < '{pp.SecondDate}' AND sbname = '{pp.sname}' ";
+                SqlCommand command = new SqlCommand(queryString, dataBase.getConnection());
+                dataBase.openConnection();
+                SqlDataReader reader = command.ExecuteReader();
 
+                while (reader.Read())
+                {
+                    ReadsingleRowSt2(dgw, reader);
+                }
+
+                reader.Close();
+                dataBase.closeConnection();
+            }
         }
+        //private void RefreshDataGridSearchSubj(DataGridView dgw)
+        //{
+        //    dgw.Rows.Clear();
+        //    var name = comboBox1.Text;
+        //    string queryString = $"select * from perfomance where sbname = '{name}'";
+        //    SqlCommand command = new SqlCommand(queryString, dataBase.getConnection());
+        //    dataBase.openConnection();
+        //    SqlDataReader reader = command.ExecuteReader();
+
+        //    while (reader.Read())
+        //    {
+        //        ReadsingleRowSt2(dgw, reader);
+        //    }
+
+        //    reader.Close();
+        //    dataBase.closeConnection();
+        //}
+        //private void button4_Click(object sender, EventArgs e)
+        //{
+        //    if (comboBox1.Text == "Предметы")
+        //    {
+        //        RefreshDataGridSearchDate(dgv);
+        //    }
+        //    else
+        //        RefreshDataGridSearchDate2(dgv);
+        //    isDAte = true;
+
+        //}
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -188,7 +260,23 @@ namespace Coursework.MainForms
 
         private void button5_Click(object sender, EventArgs e)
         {
-            RefreshDataGridSearchSubj(dgv);
+            if (comboBox1.Text == "Предметы" || comboBox1.Text == "Все предметы")
+            {
+                RefreshDataGridAcadem(dgv);
+                RefreshDataGridSearchDate3(dgv);
+            }
+            else
+                RefreshDataGridSearchDate2(dgv);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            RefreshDataGridSearchPrp(dgv);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            RefreshDataGridSearchPrp2(dgv);
         }
     }
 }

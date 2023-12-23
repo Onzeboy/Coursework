@@ -78,5 +78,10 @@ namespace Coursework.MainForms
         {
             this.Close();
         }
+
+        private void PrepdAdd_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

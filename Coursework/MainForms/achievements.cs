@@ -28,7 +28,7 @@ namespace Coursework.MainForms
         private void RefreshDataGridAcadem(DataGridView dgw)
         {
             dgw.Rows.Clear();
-            string queryString = "select * from  achievements;";
+            string queryString = $"select * from  achievements where id_student = '{idAc}'";
             SqlCommand command = new SqlCommand(queryString, dataBase.getConnection());
             dataBase.openConnection();
             SqlDataReader reader = command.ExecuteReader();

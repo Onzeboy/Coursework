@@ -33,6 +33,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dgv = new System.Windows.Forms.DataGridView();
             this.idddd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sub = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.df = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.achievement = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.achievementType = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,6 +77,7 @@
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idddd,
+            this.sub,
             this.df,
             this.achievement,
             this.achievementType,
@@ -91,6 +93,11 @@
             this.idddd.HeaderText = "id";
             this.idddd.Name = "idddd";
             this.idddd.Visible = false;
+            // 
+            // sub
+            // 
+            this.sub.HeaderText = "Предмет";
+            this.sub.Name = "sub";
             // 
             // df
             // 
@@ -125,7 +132,7 @@
             this.MaximumSize = new System.Drawing.Size(750, 500);
             this.MinimumSize = new System.Drawing.Size(750, 500);
             this.Name = "Prepd";
-            this.Text = "Prepd";
+            this.Text = "Преподаватели";
             this.Load += new System.EventHandler(this.Prepd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
@@ -139,6 +146,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn idddd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sub;
         private System.Windows.Forms.DataGridViewTextBoxColumn df;
         private System.Windows.Forms.DataGridViewTextBoxColumn achievement;
         private System.Windows.Forms.DataGridViewTextBoxColumn achievementType;

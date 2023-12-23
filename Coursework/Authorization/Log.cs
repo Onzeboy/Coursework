@@ -27,7 +27,7 @@ namespace Coursework
             var passUser = textBox2.Text;
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
-
+            dataBase.openConnection();
             string querystring = $"select id_user, login_user, password_user from register where login_user = '{LoginUser}' and password_user ='{passUser}'";
             SqlCommand command = new SqlCommand(querystring, dataBase.getConnection());
             adapter.SelectCommand = command;
@@ -39,9 +39,13 @@ namespace Coursework
                 Form1 form1 = new Form1(LoginUser);
                 form1.ShowDialog();
                 this.Close();
+                dataBase.closeConnection();
             }
             else
-                MessageBox.Show("Такого аккаунта не существует!", "Аккаунта не существует!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            {
+                dataBase.closeConnection();
+               MessageBox.Show("Такого аккаунта не существует!", "Аккаунта не существует!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void Log_Load(object sender, EventArgs e)
